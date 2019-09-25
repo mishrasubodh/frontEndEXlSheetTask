@@ -1,0 +1,27 @@
+<div class="container-fluid" >
+          <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-12 side-slide">
+                  <div *ngFor='let i of imgUrl;let ind=index' class="nrmlbox"  (click)='changeSlide(ind)' [ngClass]="{'selected':currentIndex==ind}" >
+                     <p>{{ind+1}}</p>  <img [src]="i"  class="imgfit">
+                  </div>
+                  <button type="button" class="btn btn-default btn-circle addbtn" (click)='newSlideAdd()'><i class="fa fa-plus"></i>
+                  </button>
+            </div>       
+            <div class="col-lg-10 col-md-8 col-sm-12 main-slide" >
+              <div class="slide" id='pic-test'>
+                <img src="../../assets/logo.png" alt="">
+                 <div class="content">
+
+                    <div class="form-group">
+                        <input type="text"  (keyup)="setData(currentData)" [(ngModel)]="currentData.title" placeholder="Click Add To Tittle">
+                    </div>
+                    <div class="form-group">
+                        <textarea (keyup)="setData(currentData)"  [(ngModel)]="currentData.text" placeholder="Click To Add Text"></textarea>
+                    </div>
+                 </div>
+              </div>
+          </div>
+          </div>
+        </div>
+
+        

@@ -1,0 +1,150 @@
+body{
+     margin: 0;
+     padding: 0;
+     text-decoration: none;
+   }
+  .container-fluid{
+   margin-top:50px;
+   }
+   .addbtn{
+    position: fixed;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    bottom: 50px;
+    background: orange;
+    color: white;
+    border-radius: 134px;
+    z-index: 50;
+
+   }
+   
+  .slide{
+   background-color: #1b212c;
+   color: white;
+   width: 100%;
+   padding: 20px;
+   position: relative;
+ }
+.main-slide  .slide img{
+   position: absolute;
+   top: 10px;
+   width: 100px;
+   left: 0;
+   z-index: 1;
+ }
+ .side-slide  .slide img{
+   position: absolute;
+   top: 10px;
+   width: 20px;
+   left: 0;
+   z-index: 1;
+ }
+ 
+ .content{
+   z-index: 5;
+ }
+ .side-slide .content{
+ height: 105px;
+ overflow-y: hidden;
+ }
+ .main-slide .slide{
+  padding: 50px 100px 50px 120px;  
+  margin: 10px 0;
+  min-height: 80vh;
+   width:80%;
+ }
+ .side-slide{
+   overflow-y: scroll;
+   height: 80vh;
+ }
+ 
+ .side-slide  h3{
+  font-size: 18px;    
+ }
+ .side-slide  p{
+  font-size: 12px;    
+ }
+ .side-slide .slide{
+  margin: 10px 0; 
+  padding: 10px 22px;
+  max-height: 157px;
+ }
+ input,textarea{
+   padding: 10px 20px;
+ width: 100%;
+ background: transparent;
+ border:1px solid lightslategray;
+ }
+ input[type="text"]{
+  font-size: 30px;
+ }
+ input[type="text"], textarea{
+  color: white;
+ }
+ textarea{
+   height: 150px;
+ }
+ input::placeholder, textarea::placeholder{
+   color: white;
+ }
+ @media only screen and (max-width: 770px) {
+    .side-slide .nrmlbox {
+     margin: 10px;
+     min-width: 200px;
+ }
+ .imgfit{
+   height: 200px!important;
+ }
+  .main-slide .slide{
+  width:100%
+  }
+ .side-slide{
+  height: 180px;
+  display: flex;
+ }
+}
+.imgfit{
+  width: 100%;height: 115px; margin-top: -5px;
+}
+.selected{
+  border:5px solid orange!important;
+  overflow: hidden;
+  position: relative;
+}
+.nrmlbox{
+  border:5px solid #1b212c;
+  overflow: hidden;
+  height: 120px;
+  position: relative;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.nrmlbox p{
+  color: white;
+  position: absolute;
+  bottom: -18px;
+  left: 0px;
+  background: black;
+  padding: 3px 5px;
+}
+.selected p{
+  color: white;
+  position: absolute;
+  bottom: -18px;
+  left: 0px;
+  background: orange;
+  padding: 3px 5px;
+}
+
+@media only screen and (max-width: 500px) {
+.main-slide  .slide img{
+   position: absolute;
+   top: 10px;
+   width: 50px;
+ }
+ 
+ .main-slide .slide{
+  padding: 50px 50px 50px 60px;
+ }
+}
